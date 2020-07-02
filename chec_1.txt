@@ -1,0 +1,113 @@
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~ (master)
+$ mkdir learn_git_again
+mkdir: cannot create directory ‘learn_git_again’: File exists
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~ (master)
+$ cd learn_git_again
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ touch third.txt
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ git init
+Initialized empty Git repository in C:/Users/ASUS/learn_git_again/.git/
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ git add <third.txt>
+bash: syntax error near unexpected token `newline'
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ git add 'third.txt>'
+fatal: pathspec 'third.txt>' did not match any files
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ bash: syntax error near
+bash: bash:: command not found
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ git init "third.txt"
+fatal: cannot mkdir third.txt: File exists
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ "adding third.txt"
+bash: adding third.txt: command not found
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ git commit -m "adding third.txt"
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        third.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ touch
+touch: missing file operand
+Try 'touch --help' for more information.
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ touch fourth.txt
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ git add <fourth.txt>
+bash: syntax error near unexpected token `newline'
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ git add "fourth.txt"
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ git commit -m "adding fourth.txt"
+[master (root-commit) 950abb8] adding fourth.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 fourth.txt
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ git rm --cached "third.txt"
+fatal: pathspec 'third.txt' did not match any files
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ git add "third.txt"
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ git commit -m "removing third.txt"
+[master 72192d7] removing third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 third.txt
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ git log "third.txt"
+commit 72192d727948bb695e05f6cff4c9b490bc0761be (HEAD -> master)
+Author: Moha1447 <66945706+Moha1447@users.noreply.github.com>
+Date:   Thu Jul 2 11:28:01 2020 +0200
+
+    removing third.txt
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$ git config -- global
+error: key does not contain a section: global
+
+ASUS@LAPTOP-MS276BC2 MINGW64 ~/learn_git_again (master)
+$
